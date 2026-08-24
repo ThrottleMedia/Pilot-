@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Captain Du Preez ✈️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;min-height:100vh;overflow-x:hidden;color:#102a43;background:linear-gradient(#58bdf2 0%,#bdeaff 55%,#eefaff 100%)}
+.sky{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+.cloud{position:absolute;width:180px;height:48px;background:#fff;border-radius:50px;opacity:.82}
+.cloud:before,.cloud:after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cloud:before{width:75px;height:75px;left:28px;top:-32px}.cloud:after{width:95px;height:95px;right:18px;top:-45px}
+.c1{top:13%;left:-220px;animation:cloud 32s linear infinite}.c2{top:42%;left:-260px;animation:cloud 42s linear infinite 8s}.c3{top:70%;left:-230px;animation:cloud 38s linear infinite 17s}
+@keyframes cloud{to{transform:translateX(125vw)}}
+.plane{position:fixed;left:-100px;top:9%;font-size:55px;z-index:2;animation:fly 16s linear infinite;filter:drop-shadow(0 6px 4px #579)}
+@keyframes fly{0%{transform:translate(0,0) rotate(4deg)}50%{transform:translate(55vw,-35px) rotate(-4deg)}100%{transform:translate(120vw,15px) rotate(4deg)}}
+.container{position:relative;z-index:3;max-width:900px;margin:auto;padding:25px 18px 70px}
+.hero{text-align:center;color:white;padding:45px 10px 30px;text-shadow:0 3px 8px #357}
+.hero h1{font-size:clamp(40px,9vw,78px);letter-spacing:2px}
+.hero h2{margin-top:8px}
+.hero p{margin-top:12px;font-size:17px}
+.card{background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.9);border-radius:25px;padding:28px;margin:20px 0;box-shadow:0 15px 35px #28709a33;backdrop-filter:blur(5px)}
+.card h2{text-align:center;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.stat{text-align:center;background:#eaf8ff;border-radius:18px;padding:18px}
+.stat .icon{font-size:28px}.stat small{display:block;margin-top:7px;color:#587}
+.stat b{display:block;margin-top:5px}
+.bar{height:24px;background:#d7e8ef;border-radius:20px;overflow:hidden;margin:14px 0}
+.fill{height:100%;width:78%;background:linear-gradient(90deg,#16729d,#5bd0ff);animation:load 2s}
+@keyframes load{from{width:0}to{width:78%}}
+.check{list-style:none}.check li{padding:13px;background:#f1fbff;border-radius:12px;margin:8px 0;cursor:pointer}
+.done{text-decoration:line-through;opacity:.5}
+button{border:0;border-radius:30px;background:#102a43;color:#fff;padding:14px 23px;font-size:16px;font-weight:bold;cursor:pointer;display:block;margin:20px auto 0;transition:.2s}
+button:hover{transform:translateY(-2px) scale(1.03);background:#176b93}
+.screen{background:#101820;color:#4dff8b;border-radius:15px;padding:20px;font-family:monospace;line-height:1.7;min-height:120px;box-shadow:inset 0 0 25px #000}
+.output{text-align:center;font-weight:bold;margin-top:15px;min-height:25px}
+.secret{display:none;background:#fff0f6;border-radius:20px;text-align:center;padding:25px;margin-top:18px;animation:pop .45s}
+.secret.show{display:block}
+@keyframes pop{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+.heart{font-size:60px;animation:beat 1.1s infinite}
+@keyframes beat{50%{transform:scale(1.18)}}
+.love{text-align:center}.love h2{font-size:34px}
+footer{text-align:center;color:white;font-weight:bold;margin-top:30px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.card{padding:21px}.hero{padding-top:60px}}
+</style>
+</head>
+<body>
+<div class="sky">
+  <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+</div>
+<div class="plane">✈️</div>
+
+<main class="container">
+<section class="hero">
+  <h1>CAPTAIN DU PREEZ ✈️</h1>
+  <h2>Student Pilot Operations Centre</h2>
+  <p>Future Captain • Professional Dream Chaser • Occasional Heart-Stealer ❤️</p>
+</section>
+
+<section class="card">
+<h2>🛫 FLIGHT STATUS</h2>
+<div class="grid">
+<div class="stat"><div class="icon">👨‍✈️</div><small>PILOT</small><b>Du Preez</b></div>
+<div class="stat"><div class="icon">✈️</div><small>AIRCRAFT</small><b>Ready for takeoff</b></div>
+<div class="stat"><div class="icon">📍</div><small>DESTINATION</small><b>Chané's heart ❤️</b></div>
+<div class="stat"><div class="icon">❤️</div><small>HEART STATUS</small><b>Dangerously full</b></div>
+</div>
+</section>
+
+<section class="card">
+<h2>🎓 PILOT PROGRESS</h2>
+<p style="text-align:center">Du Preez is becoming a pilot...</p>
+<div class="bar"><div class="fill"></div></div>
+<p style="text-align:center">78% Pilot • 22% Still figuring things out 😂</p>
+</section>
+
+<section class="card">
+<h2>📝 PRE-FLIGHT CHECKLIST</h2>
+<ul class="check">
+<li onclick="toggleCheck(this)">☐ Aircraft ready</li>
+<li onclick="toggleCheck(this)">☐ Fuel checked</li>
+<li onclick="toggleCheck(this)">☐ Flight plan ready</li>
+<li onclick="toggleCheck(this)">☐ Pilot looking handsome</li>
+<li onclick="toggleCheck(this)">☐ Someone on the ground waiting for him ❤️</li>
+</ul>
+<button onclick="finishCheck()">START PRE-FLIGHT ✈️</button>
+<div id="checkOut" class="output"></div>
+</section>
+
+<section class="card">
+<h2>📡 ATC RADIO</h2>
+<div id="radio" class="screen">
+ATC: Du Preez, radio check.<br>
+DU PREEZ: Loud and clear.<br>
+ATC: You are cleared for takeoff.<br>
+ATC: Destination?<br>
+DU PREEZ: Somewhere near Chané's heart. ❤️
+</div>
+<button onclick="radio()">CONTACT ATC</button>
+</section>
+
+<section class="card">
+<h2>🚨 EMERGENCY SYSTEM</h2>
+<p style="text-align:center">Use only if Captain Du Preez becomes dangerously handsome.</p>
+<button onclick="panic()">🚨 PANIC BUTTON</button>
+<div id="panic" class="output"></div>
+</section>
+
+<section class="card">
+<h2>🔐 CLASSIFIED PILOT FILE</h2>
+<p style="text-align:center">Access restricted. Pilot clearance required.</p>
+<button onclick="secret()">🔓 OPEN CLASSIFIED FILE</button>
+<div id="secret" class="secret">
+<div class="heart">❤️</div>
+<h2>CLASSIFIED</h2>
+<p>Dear Du Preez,</p><br>
+<p>I just wanted to remind you that there is someone on the ground who is ridiculously proud of you.</p><br>
+<p>Keep chasing those pilot dreams. One day you're going to look back and realise just how far you've come. ✈️</p><br>
+<p>And just between you and me...</p>
+<p><b>you're already my favourite pilot. ❤️</b></p><br>
+<p>— Chané 🫶</p>
+</div>
+</section>
+
+<section class="card love">
+<div class="heart">❤️</div>
+<h2>CLEARED FOR TAKEOFF</h2><br>
+<p>Captain Du Preez,</p><br>
+<p>Your aircraft is ready.<br>Your dreams are waiting.<br>And someone is definitely cheering you on from the ground. 🥹❤️</p><br>
+<h3>Fly high, Captain. ✈️</h3>
+</section>
+
+<footer>FLIGHT CHANÉ-505 • No turbulence expected ❤️</footer>
+</main>
+
+<script>
+function toggleCheck(el){
+  el.classList.toggle("done");
+  el.innerHTML=el.classList.contains("done")
+    ? el.innerHTML.replace("☐","☑")
+    : el.innerHTML.replace("☑","☐");
+}
+function finishCheck(){
+ document.getElementById("checkOut").textContent="✅ PRE-FLIGHT COMPLETE! Captain Du Preez is cleared to fly. ✈️❤️";
+}
+function radio(){
+ const a=[
+ "ATC: Du Preez, you are cleared for takeoff. ❤️<br>ATC: Please stop being so handsome on the radio.",
+ "ATC: Flight plan approved.<br>ATC: Destination remains Chané's heart. 😂❤️",
+ "ATC: Warning! Excessive pilot confidence detected.<br>ATC: Continue anyway. ✈️",
+ "ATC: Maintain altitude.<br>ATC: And please maintain contact with Chané. 👀❤️",
+ "ATC: Cleared for takeoff.<br>ATC: Don't forget who your favourite passenger is. 😌"
+ ];
+ document.getElementById("radio").innerHTML=a[Math.floor(Math.random()*a.length)];
+}
+function panic(){
+ const a=[
+ "🚨 MAYDAY! Du Preez is too handsome. 😭❤️",
+ "🚨 HEART RATE EXCEEDING NORMAL LIMITS. ❤️",
+ "🚨 CRITICAL ERROR: Pilot has stolen someone's heart.",
+ "🚨 ATC HAS BEEN NOTIFIED OF THE HANDSOME PILOT."
+ ];
+ document.getElementById("panic").textContent=a[Math.floor(Math.random()*a.length)];
+}
+function secret(){
+ document.getElementById("secret").classList.toggle("show");
+}
+</script>
+</body>
+</html>
